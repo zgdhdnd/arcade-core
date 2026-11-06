@@ -1,0 +1,28 @@
+{
+	"name": "@zgdhdnd/arcade-core",
+	"version": "1.0.1",
+	"description": "Pure, framework-free game logic for 2048: move, spawn, hasMoves and canMove.",
+	"author": "Jake Chen",
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"test": "npm run build && node --test test/",
+		"prepublishOnly": "npm test"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"typescript": "^6.0.3"
+	}
+}
